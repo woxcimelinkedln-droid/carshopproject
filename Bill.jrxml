@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Bill" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8a332845-20f8-4cf5-b2d2-51d34d1e10f6">
+	<property name="ireport.zoom" value="1.1000000000000019"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="InvoiceNo" class="java.lang.String"/>
+	<parameter name="Date" class="java.lang.String"/>
+	<parameter name="Time" class="java.lang.String"/>
+	<parameter name="Warranty" class="java.lang.String"/>
+	<parameter name="Service" class="java.lang.String"/>
+	<parameter name="Cus" class="java.lang.String"/>
+	<field name="CAR_ID" class="java.lang.String"/>
+	<field name="CAR_NAME" class="java.lang.String"/>
+	<field name="Amount" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="139" splitType="Stretch">
+			<image>
+				<reportElement uuid="57156f00-0160-4470-84c4-7eaa4da5d49d" x="374" y="0" width="120" height="61"/>
+				<imageExpression><![CDATA["D:\\ASE 2101 - Car Shop - Themini Apsara - 7345\\Img\\logo.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="ed5f107f-568d-4a16-9881-d2943e6b1514" x="0" y="31" width="802" height="71" forecolor="#CC0000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="58" isBold="true"/>
+				</textElement>
+				<text><![CDATA[WARRANTY CARD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2c24be56-d40d-4d1c-ab5c-47e356f11ffe" x="0" y="102" width="802" height="36" forecolor="#006666"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Agency FB" size="30" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TA AUTO SHOP]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="105" splitType="Stretch">
+			<textField>
+				<reportElement uuid="d373c147-6ee2-4b47-bc5d-9e486c30d81f" x="403" y="28" width="399" height="20" forecolor="#006666"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Berlin Sans FB Demi" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="bc0f6779-0438-4258-ae4e-76cf276d8a61" x="403" y="51" width="399" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Berlin Sans FB Demi" size="16" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[TIME]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="fdc37669-2cb7-4b3d-9bbd-0df79f6d9003" x="403" y="76" width="399" height="28" forecolor="#006666"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Berlin Sans FB Demi" size="16" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1816d6a5-cf1e-4216-969c-ad919aef2395" x="2" y="51" width="399" height="53" forecolor="#006666"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Berlin Sans FB Demi" size="36" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{InvoiceNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="f554136b-be5f-49cf-b1d1-99fe2bc9d19f" x="403" y="3" width="399" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Berlin Sans FB Demi" size="16" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f554136b-be5f-49cf-b1d1-99fe2bc9d19f" x="2" y="3" width="399" height="45"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Berlin Sans FB Demi" size="34" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[INVOICE NO:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="ad233474-922d-43d8-ae34-181a6f297796" x="0" y="15" width="200" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Agency FB" size="26"/>
+				</textElement>
+				<text><![CDATA[CAR_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="faaa8507-bb57-4899-85e5-eb73858aa595" x="200" y="15" width="393" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Agency FB" size="26"/>
+				</textElement>
+				<text><![CDATA[CAR_NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a8e65e7b-a4ad-49c8-900b-fb1bb07ede6c" x="593" y="15" width="209" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Agency FB" size="26"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="3d9c609f-faf9-4d47-a493-bfe905d7892b" x="0" y="3" width="802" height="1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="47" splitType="Stretch">
+			<textField>
+				<reportElement uuid="e9f67611-4cdf-46f3-a38e-453c0fd35b46" x="0" y="0" width="200" height="37" forecolor="#006666"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Agency FB" size="26"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CAR_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e493518e-1502-47f4-9871-9b9e3486c8bd" x="200" y="0" width="393" height="37" forecolor="#006666"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Agency FB" size="26"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CAR_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="760d62a8-7366-4fdf-b327-3714283a265f" x="593" y="0" width="209" height="37" forecolor="#006666"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Agency FB" size="26"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Amount}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="4b43fea7-3677-4a6a-bf35-67dcb4551ee2" x="0" y="43" width="802" height="1"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="207" splitType="Stretch">
+			<image>
+				<reportElement uuid="6365a938-27c0-4a88-adb3-e9bd252c21dd" x="593" y="0" width="296" height="205"/>
+				<imageExpression><![CDATA["D:\\ASE 2101 - Car Shop - Themini Apsara - 7345\\Img\\Bill.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="920afc52-0a9b-45f3-9ff3-4cd5dbe0f715" x="0" y="173" width="593" height="32" forecolor="#006666"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Agency FB" size="26"/>
+				</textElement>
+				<text><![CDATA[TA AUTO SHOP - MARADANA ROAD - MARADANA. 0112 774 096]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="016aba86-0bc1-4845-adf7-91d661460673" x="89" y="49" width="111" height="43"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Agency FB" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[WARRANTY :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="07cfad95-959f-490a-8c72-cb98dd7e5445" x="89" y="92" width="111" height="43"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Agency FB" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SERVICES :]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="d6d6a628-01a2-4f3a-ab04-a5b295329e51" x="200" y="49" width="314" height="43" forecolor="#006666"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Agency FB" size="34" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Warranty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="eb7bbaf0-d290-4007-92ae-7dffd15a9ad0" x="200" y="92" width="314" height="43" forecolor="#006666"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Agency FB" size="34" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Service}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="1114b2b0-8db9-49b2-bd5d-605f44faac73" x="89" y="6" width="111" height="43"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Agency FB" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CUSTOMER :]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="29264a59-256d-4422-a3f7-dcd67f4b0811" x="200" y="6" width="314" height="43" forecolor="#CC0000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Agency FB" size="26" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Cus}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
